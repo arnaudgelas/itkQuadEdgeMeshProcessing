@@ -6,7 +6,7 @@ IF( ITK_FOUND )
   INCLUDE( ${ITK_USE_FILE} )
 ENDIF( ITK_FOUND )
 
-SET( APPS 
+SET( APPS
   QuadricDecimation
   Decimation
   Smoothing
