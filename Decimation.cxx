@@ -21,7 +21,7 @@
 #include <sstream>
 
 #include "itkQuadEdgeMeshDecimationCriteria.h"
-#include "itkQuadEdgeMeshSquaredEdgeLengthDecimation.h"
+#include "itkSquaredEdgeLengthDecimationQuadEdgeMeshFilter.h"
 
 int main( int argc, char* argv[] )
 {
@@ -61,7 +61,7 @@ int main( int argc, char* argv[] )
 
   typedef itk::NumberOfFacesCriterion< MeshType > CriterionType;
 
-  typedef itk::QuadEdgeMeshSquaredEdgeLengthDecimation< 
+  typedef itk::SquaredEdgeLengthDecimationQuadEdgeMeshFilter<
     MeshType, MeshType, CriterionType > DecimationType;
 
   long N;

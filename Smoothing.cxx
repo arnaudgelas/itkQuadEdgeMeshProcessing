@@ -21,7 +21,7 @@
 
 #include <sstream>
 
-#include "itkQuadEdgeMeshSmoothing.h"
+#include "itkSmoothingQuadEdgeMeshFilter.h"
 #include "itkQuadEdgeMeshParamMatrixCoefficients.h"
 
 int main( int argc, char* argv[] )
@@ -76,7 +76,7 @@ int main( int argc, char* argv[] )
 
   itk::ConformalMatrixCoefficients< MeshType > coeff0;
 
-  typedef itk::QuadEdgeMeshSmoothing< MeshType, MeshType > SmoothingType;
+  typedef itk::SmoothingQuadEdgeMeshFilter< MeshType, MeshType > SmoothingType;
   SmoothingType::Pointer filter = SmoothingType::New( );
   filter->SetInput( mesh );
   filter->SetNumberOfIterations( nb_iter );
